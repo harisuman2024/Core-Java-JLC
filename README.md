@@ -1,1 +1,1 @@
-# Core-Java-JLC
+# CoreJava_module_01_Introduction
