@@ -1,0 +1,158 @@
+Q) Why to set the Path?
+Ans: To Access the Binary files from One location to any other location in the System, You need to set path to location where your Binary  files are present.
+
+In the case of JDK, Binary  files like javac.exe, java.exe,jar.exe,javap.exe etc are present in bin folder 
+SO you have to set the path to bin folder of JDK (E:\JDK1.8.0\bin)
+
+
+Q) What are the ways to set the Path?
+Ans:
+Two ways to Set the Path
+1) Temporarly at command Line
+
+set path=%path%;E:\JDK1.8.0\bin;
+
+2)  Permanently at System Environment Variables
+
+============================================================
+Hello.java
+==========
+
+class Hello{
+public static void main(String as[]){
+
+System.out.println("Hello Guys ");
+System.out.println("Welcome to JLC !!! ");
+
+}
+}
+
+javac <FileName>.java
+java <ClassName>
+
+
+Q) Can I take different Names for File Name and Class Name?
+Ans:
+Yes
+
+
+Hello.java
+==========
+
+class Test{
+public static void main(String as[]){
+
+System.out.println("Hello Guys ");
+System.out.println("Welcome to JLC !!! ");
+
+}
+}
+
+
+javac Hello.java  => generates Test.class
+
+java Hello  // Error - Error: Could not find or load main class Hello
+
+java test  // Error - Error: Could not find or load main class test
+
+java Test  //OK
+
+Q) what is the main class?
+Ans: Class which contains the Standard main() method is called as Main class.
+
+public static void main(String as[])
+
+Q) Can I write the main() method as follows
+static public void main(String as[])
+
+Ans: 
+Yes
+Order of Modifiers can be any thing.
+
+Q) Can I add extra modifiers for  main() method as follows
+final synchronized static public void main(String as[])
+
+Ans: 
+Yes
+
+
+Q) Can I write 2 or more classes in One Source File?
+Ans:
+Yes, You can
+
+Test.java
+=========
+class Hello{
+public static void main(String as[]){
+System.out.println("Hello Guys ");
+System.out.println("Welcome to JLC !!! ");
+}
+}
+
+class Hai{
+public void main(){
+System.out.println("Hai Guys ");
+System.out.println("Welcome to JLC !!! ");
+}
+}
+
+class A{  }
+
+
+***File Names are NOT Case-Sensitive
+javac Test.java
+javac test.java
+
+** Above generates 3 .class files
+Hello.class
+Hai.class
+A.class
+
+Class Names are Case-Sensitive
+a) java A
+
+Error: Main method not found in class A, please define the main method as:
+   public static void main(String[] args)
+
+b) java Hai
+
+Error: Main method not found in class Hai, please define the main method as:
+   public static void main(String[] args)
+
+c) java Hello   //OK
+
+
+
+/*
+I am Srinivas Dande
+Author of this Hello Class
+*/
+// Hello Guys
+
+class Hello{
+public static void main(String as[]){
+
+int a=10;
+int b=20;
+int c=a+b;
+System.out.println("c : "+c);
+
+}
+}
+
+
+
+ class Hello {
+   public static void main(String[] var0) {
+      byte var1 = 10;
+      byte var2 = 20;
+      int var3 = var1 + var2;
+      System.out.println("c : " + var3);
+   }
+}
+
+
+
+
+
+
